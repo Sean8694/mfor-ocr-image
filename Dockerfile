@@ -5,7 +5,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 RUN pip install numpy scipy protobuf tensorflow keras pillow h5py django
 RUN cd /root \
-  && curl https://github.com/opencv/opencv/archive/3.2.0.zip -O opencv-3.2.0.zip \
+  && wget https://github.com/opencv/opencv/archive/3.2.0.zip -O opencv-3.2.0.zip \
   && unzip opencv-3.2.0.zip \
   && cd opencv-3.2.0 \
   && mkdir build \
